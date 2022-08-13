@@ -17,6 +17,10 @@
             width: 90%;
         }
     }
+
+    .title_left {
+        font-size: 30px;
+    }
        
 }
 
@@ -38,6 +42,25 @@
             display: none;
         }
     }
+
+    .title_left {
+        font-size: 25px;
+        line-height: 35px;
+        text-align: center;
+    }
+
+
+    .consultation {
+        &__descr {
+            text-align: center;
+            line-height: 25px;
+        }
+        .feed-form {
+            width: 300px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+    }
 }
 
 @media (max-width: 575px) {
@@ -48,12 +71,14 @@
     .promo {
         &__header {
             text-align: center;
+            font-size: 35px;
         }
         &__subheader {
             text-align: center;
         }
         &__icons {
             width: 90%;
+            align-items: flex-end;
             
         }
         &__icon {
@@ -64,7 +89,11 @@
         }
     }
 
+    .title {
+        font-size: 35px;
+    }
     .advantages {
+        
         &__block {
             width: 90%;
         }
@@ -85,6 +114,25 @@
         }
         &__official {
             display: none;
+        }
+    }
+
+    .title_left {
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .consultation {
+        &__descr {
+            text-align: center;
+            line-height: 20px;
+            font-size: 15px;
+        }
+        .feed-form {
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 20px;
         }
     }
 }
