@@ -22,4 +22,17 @@
         font-size: 16px;
         line-height: 25px;
     }
+    &_mini {
+        background: $main-color;
+        width: 135px;
+        height: 44px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+        border: none;
+        border-radius: 5px;
+    }
 }
