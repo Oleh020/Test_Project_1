@@ -21,7 +21,29 @@
     .title_left {
         font-size: 30px;
     }
-       
+    .carousel {
+        &__inner {
+            width: 90%;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .slick-dots {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 20px;
+        li {
+            display: block;
+            margin: 0 5px 0 5px;
+        }
+    }  
+    .title {
+        font-size: 30px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -61,6 +83,19 @@
             margin-top: 20px;
         }
     }
+    .title {
+        font-size: 25px;
+    }
+    .catalog {
+        &__content {
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        &__tabs {
+            margin-top: 40px;
+        }
+    }
 }
 
 @media (max-width: 575px) {
@@ -90,7 +125,7 @@
     }
 
     .title {
-        font-size: 35px;
+        font-size: 25px;
     }
     .advantages {
         
@@ -133,6 +168,60 @@
             width: 90%;
             margin: 0 auto;
             margin-top: 20px;
+        }
+    }
+    .catalog {
+        padding-bottom: 50px;
+        &__tab {
+           font-size: 12px;
+        }
+    }
+    .reviews {
+        &__block {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 60px;
+        }
+        &__img {
+            margin-right: 0;
+            margin-bottom: 40px;
+        }
+        &__name {
+            text-align: center;
+        }
+        &__amount {
+            text-align: center;
+        }
+        &__info {
+            text-align: center;
+        }
+    }
+    .carousel {
+        padding: 50px 0 50px 0;
+    }
+    .footer {
+        &__social {
+            width: 100%;
+            padding: 30px;
+            height: 220px;
+        }
+        &__social-items {
+            width: 90%;
+            margin: 0 auto;
+        }
+        &__social-item {
+            height: 50px;
+            width: 50px;
+            margin: 0 10px 0 10px;
+        }
+    }
+}
+
+@media (max-width: 376px) {
+    .catalog {
+        &__tab {
+           font-size: 10px;
         }
     }
 }
