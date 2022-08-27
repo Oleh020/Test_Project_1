@@ -33,5 +33,54 @@ $(document).ready(function(){
 
     toggleSlide('.catalog-item__link');
     toggleSlide('.catalog-item__back');
+
+    //modal windows
+
+    $('[data-modal=consultation]').on('click', function() {
+        $('.overlay, #consultation').fadeIn('slow');
+    });
+    $('.modal__close').on('click', function() {
+        $('.overlay, #consultation, #thanks, #order').fadeOut('Slow');
+    });
+
+    $('.button_mini').each(function(i) {
+        $(this).on('click', function() {
+            $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+            $('.overlay, #order').fadeIn('slow');
+        });
+    });
+
+
+
+    function validateForms(form) {
+        $(form).validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2
+                },
+                phone: "required",
+                email: {
+                    required: true,
+                    email: true,
+                }
+            },
+            messages: {
+                name: {
+                    required: "Введіть своє ім'я, будь ласка",
+                    minlength: jQuery.validator.format("Введіть {0} символів!")
+                },
+                phone: "Введіть свій номер телефону, будь ласка",
+                email: {
+                  required: "Введіть свою електронну пошту, будь ласка",
+                  email: "Електронну пошту введено неправильно"
+                }
+            }
+        });
+    };
+
+    validateForms('#consultation form');
+    validateForms('#consultation-form');
+    validateForms('#order form');
 });
           
